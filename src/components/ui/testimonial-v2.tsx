@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from "motion/react";
+import { siteConfig } from "../../config/site-content";
 
 // --- Types ---
 interface Testimonial {
@@ -105,10 +106,10 @@ const TestimonialsColumn = (props: {
                                         boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15)",
                                         transition: { type: "spring", stiffness: 400, damping: 17 }
                                     }}
-                                    className="p-8 rounded-3xl border border-white/10 shadow-lg max-w-xs w-full bg-white/5 backdrop-blur-sm cursor-default select-none group focus:outline-none focus:ring-2 focus:ring-gold/30"
+                                    className="p-8 rounded-3xl border border-primary/10 shadow-lg max-w-xs w-full bg-white cursor-default select-none group focus:outline-none focus:ring-2 focus:ring-accent/30"
                                 >
                                     <blockquote className="m-0 p-0">
-                                        <p className="text-white/80 leading-relaxed font-normal m-0 text-sm">
+                                        <p className="text-primary/80 leading-relaxed font-normal m-0 text-sm">
                                             "{text}"
                                         </p>
                                         <footer className="flex items-center gap-3 mt-6">
@@ -117,14 +118,14 @@ const TestimonialsColumn = (props: {
                                                 height={40}
                                                 src={image}
                                                 alt={`Avatar de ${name}`}
-                                                className="h-10 w-10 rounded-full object-cover ring-2 ring-white/20 group-hover:ring-gold/40 transition-all duration-300 ease-in-out"
+                                                className="h-10 w-10 rounded-full object-cover ring-2 ring-primary/10 group-hover:ring-accent/40 transition-all duration-300 ease-in-out"
                                                 referrerPolicy="no-referrer"
                                             />
                                             <div className="flex flex-col">
-                                                <cite className="font-semibold not-italic tracking-tight leading-5 text-white">
+                                                <cite className="font-semibold not-italic tracking-tight leading-5 text-primary">
                                                     {name}
                                                 </cite>
-                                                <span className="text-xs leading-5 tracking-tight text-white/50 mt-0.5">
+                                                <span className="text-xs leading-5 tracking-tight text-primary/50 mt-0.5">
                                                     {role}
                                                 </span>
                                             </div>
@@ -145,7 +146,7 @@ export const TestimonialsSection = () => {
         <section
             id="testimonios"
             aria-labelledby="testimonials-heading"
-            className="py-24 md:py-32 bg-navy text-white relative overflow-hidden"
+            className="py-24 md:py-32 bg-background text-primary relative overflow-hidden"
         >
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -160,16 +161,16 @@ export const TestimonialsSection = () => {
             >
                 <div className="flex flex-col items-center justify-center max-w-[540px] mx-auto mb-16 md:mb-24">
                     <div className="flex justify-center">
-                        <div className="border border-white/20 py-1 px-4 rounded-full text-xs font-semibold tracking-wider uppercase text-white/80">
+                        <div className="border border-primary/20 py-1 px-4 rounded-full text-xs font-semibold tracking-wider uppercase text-primary/60">
                             Lo que dicen nuestros pacientes
                         </div>
                     </div>
 
-                    <h2 id="testimonials-heading" className="font-serif text-4xl md:text-5xl tracking-tight mt-6 text-center text-white leading-[1.1]">
+                    <h2 id="testimonials-heading" className="font-serif text-4xl md:text-5xl tracking-tight mt-6 text-center text-primary leading-[1.1]">
                         Historias de sonrisas reales
                     </h2>
-                    <p className="text-center mt-5 text-white/60 text-lg leading-relaxed max-w-sm">
-                        Más de 10.000 pacientes confían en nosotros para cuidar su sonrisa.
+                    <p className="text-center mt-5 text-primary/60 text-lg leading-relaxed max-w-sm">
+                        {siteConfig.stats[2].number}{siteConfig.stats[2].suffix} pacientes confían en nosotros para cuidar su sonrisa.
                     </p>
                 </div>
 

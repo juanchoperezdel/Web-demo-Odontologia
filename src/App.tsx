@@ -303,18 +303,19 @@ export default function App() {
         </section>
       )}
 
+
       {/* BEFORE & AFTER (INTERACTIVE SLIDER) */}
       {siteConfig.sections.results.enabled && (
-        <section id="resultados" className="py-24 md:py-32 bg-primary text-white relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[100px] pointer-events-none"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <section id="resultados" className="py-24 md:py-32 bg-white text-primary relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[100px] pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
 
           <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
             <div className="text-center mb-16 md:mb-24">
-              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mb-6 text-primary">
                 {siteConfig.results.title}
               </h2>
-              <p className="text-lg text-white/70 max-w-2xl mx-auto">
+              <p className="text-lg text-primary/70 max-w-2xl mx-auto">
                 {siteConfig.results.description}
               </p>
             </div>
@@ -323,7 +324,7 @@ export default function App() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              className="max-w-4xl mx-auto rounded-[32px] p-2 bg-white/10 backdrop-blur-md border border-white/10 shadow-2xl"
+              className="max-w-4xl mx-auto rounded-[32px] p-2 bg-primary/5 backdrop-blur-md border border-primary/10 shadow-2xl"
             >
               <BeforeAfter
                 beforeImage={siteConfig.results.before}
